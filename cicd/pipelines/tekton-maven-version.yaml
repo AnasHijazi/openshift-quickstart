@@ -2,6 +2,7 @@ apiVersion: tekton.dev/v1beta1
 kind: Task
 metadata:
   name: maven-get-project-version
+  namespace: poc-pipeline
 spec:
   workspaces:
     - name: source

@@ -1,0 +1,15 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: sample-spring-kotlin
+  namespace: poc-pipeline
+spec:
+  destination:
+    name: ''
+    namespace: poc-pipeline
+    server: 'https://kubernetes.default.svc'
+  source:
+    path: cicd/apps/sample-spring-kotlin
+    repoURL: 'https://github.com/piomin/openshift-quickstart.git'
+    targetRevision: HEAD
+  project: default
